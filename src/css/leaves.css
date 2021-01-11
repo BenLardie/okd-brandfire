@@ -1,0 +1,13 @@
+@import './variables.css';
+
+.leaf-one {
+    position: absolute;
+}
+
+.leaf-two {
+    position: absolute;
+}
+
+.leaf-pile {
+    position: absolute;
+}

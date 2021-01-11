@@ -1,0 +1,26 @@
+@import './variables.css';
+footer {
+    width: 75%;
+    height: 15em;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.footer-nav {
+    font-family: var(--main-font);
+    color: var(--accent);
+    list-style: none;
+}
+
+.footer-nav li {
+    display: inline-block;
+    margin: 0 0.5em;
+}
+
+.terms {
+    font-family: var(--main-font);
+    font-size: 0.5em;
+    color: #939598;
+    margin-top: 1.5em;
+}

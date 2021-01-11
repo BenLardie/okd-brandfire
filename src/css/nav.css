@@ -3,7 +3,7 @@
 nav {
     width: 75%;
     margin: 0 auto;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--main-font);
     display: grid;
     grid-template-columns: 2fr 1fr;
 }
@@ -17,13 +17,15 @@ nav a {
     text-transform: uppercase;
     margin-right: 2em;
     text-decoration: none;
+    font-weight: 700;
 }
 
 select {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--main-font);
     color: var(--nav-color);
     background: none;
     border: none;
     font-size: 1em;
     text-transform: uppercase;
+    font-weight: 700;
 }
