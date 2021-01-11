@@ -7,4 +7,5 @@
     border-top-left-radius: 40%;
     border-top-right-radius: 40%;
     border: 0.5em solid var(--accent);
+    z-index: 2;
 }

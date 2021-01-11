@@ -2,12 +2,24 @@
 
 .leaf-one {
     position: absolute;
+    left: 1%;
 }
 
 .leaf-two {
     position: absolute;
+    top: 70%;
+    left: 35%;
 }
 
 .leaf-pile {
     position: absolute;
+    left: 1%;
+    bottom: 15%;
+}
+
+.plate {
+    position: absolute;
+    top: -46%;
+    right: -6%;
+    width: 66%;
 }
