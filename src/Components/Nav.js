@@ -1,12 +1,14 @@
 import React from 'react'
+import '../css/nav.css'
 import canadaDry from '../images/canadadry.png'
 
 export default function Nav() {
     let language = 'eng'
     let changeLanguage = () => {}
     return (
-        <div>
+        <nav>
             <img src={canadaDry} />
+            <div className='buttons'>
             <a href='#'>recipe download</a>
             <select
                 value={language}
@@ -15,6 +17,7 @@ export default function Nav() {
                 <option value="english">English</option>
                 <option value="french">French</option>
             </select>
-        </div>
+            </div>
+        </nav>
     )
 }
