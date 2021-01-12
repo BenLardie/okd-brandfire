@@ -23,3 +23,9 @@
     right: -6%;
     width: 66%;
 }
+
+@media only screen and (device-width: 768px) {
+    #bg-image {
+        visibility: hidden;
+    }
+  }

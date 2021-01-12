@@ -24,3 +24,9 @@ footer {
     color: #939598;
     margin-top: 1.5em;
 }
+
+@media only screen and (device-width: 768px) {
+    footer {
+        visibility: hidden;
+    }
+}

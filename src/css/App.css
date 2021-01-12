@@ -14,3 +14,12 @@ main {
   width: 80%;
   margin: 0 auto;
 }
+
+@media only screen and (device-width: 768px) {
+    .App {
+      height: 100%;
+    }
+    main {
+      grid-template-columns: 1fr;
+    }
+}

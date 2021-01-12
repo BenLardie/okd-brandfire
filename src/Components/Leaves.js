@@ -8,10 +8,10 @@ import plate from '../images/plate.png'
 export default function Leaves() {
     return (
         <>
-            <img src={leafOne} className='leaf-one' alt='leaf' />
-            <img src={leafTwo} className='leaf-two' alt='leaf' />
-            <img src={leafPile} className='leaf-pile' alt='leaf' />
-            <img src={plate} className='plate' alt='plate' />
+            <img src={leafOne} className='leaf-one' id='bg-image' alt='leaf' />
+            <img src={leafTwo} className='leaf-two'id='bg-image' alt='leaf' />
+            <img src={leafPile} className='leaf-pile' id='bg-image' alt='leaf' />
+            <img src={plate} className='plate' id='bg-image' alt='plate' />
         </>
     )
 }
