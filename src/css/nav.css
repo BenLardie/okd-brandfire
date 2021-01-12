@@ -43,6 +43,10 @@ select {
 }
 
 @media only screen and (max-width: 768px) {
+    nav.open {
+        height: 100%;
+    }
+
     nav {
         width: 100%;
         background-color: white;
@@ -50,6 +54,10 @@ select {
         display: block;
         position: relative;
         margin-bottom: 2em;
+    }
+
+    .language-select.open {
+        display: block;
     }
 
     .language-select {

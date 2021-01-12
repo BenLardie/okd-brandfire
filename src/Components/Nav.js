@@ -15,21 +15,25 @@ export default function Nav() {
             // setNavOpen('')
         }
     }
+
+    const downloadFile = () => {
+        window.location.href = "https://yoursite.com/src/assets/files/exampleDoc.pdf"
+      }
     return (
-        <nav>
+        <nav className={navState}>
             <img src={canadaDry} className='logo' alt='logo' />
             <div className='buttons'>
-            <a href='#' className='recipe'>recipe download</a>
+            <a href='#' onClick={downloadFile} className='recipe'>recipe download</a>
             <select
                 value={language}
                 onChange={changeLanguage}
-                className='language-select'
+                className={`language-select ${navState}`}
             >
                 <option value="english">English</option>
                 <option value="french">French</option>
             </select>
             </div>
-            <div className='hamburger'>
+            <div className='hamburger' onClick={navClick}>
                 <i className="fa fa-bars"></i>
             </div>
         </nav>
