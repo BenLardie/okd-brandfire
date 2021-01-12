@@ -11,6 +11,7 @@ footer {
     font-family: var(--main-font);
     color: var(--accent);
     list-style: none;
+    margin-top: 3.5em;
 }
 
 .footer-nav li {
@@ -21,8 +22,8 @@ footer {
 .terms {
     font-family: var(--main-font);
     font-size: 0.5em;
-    color: #939598;
-    margin-top: 1.5em;
+    color: #666769;
+    margin-top: 2.5em;
 }
 
 @media only screen and (max-width: 768px) {

@@ -3,7 +3,7 @@
 .form-box {
     background: linear-gradient(0deg, rgba(146,7,23,1) 6%, rgba(194,15,47,1) 35%);
     width: 100%;
-    height: 53em;
+    height: 56em;
     border-top-left-radius: 40%;
     border-top-right-radius: 40%;
     border: 0.5em solid var(--accent);
@@ -30,6 +30,10 @@
 .list-number {
     color: #ffcb08;
     font-weight: 700;
+}
+
+.rules li {
+    margin: 0.5em auto;
 }
 
 form {
@@ -108,7 +112,6 @@ label {
 @media only screen and (max-width: 768px) {
     .form-box {
         border: none;
-        border-top: 0.5em solid var(--accent);
         height: 100%;
         margin-top: 1.5em;
     }
