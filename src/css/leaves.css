@@ -24,8 +24,8 @@
     width: 66%;
 }
 
-@media only screen and (device-width: 768px) {
+@media only screen and (max-width: 768px) {
     #bg-image {
-        visibility: hidden;
+        display: none;
     }
   }
