@@ -4,7 +4,7 @@ import '../css/form.css'
 export default function Form() {
     const ageGroups = ['10-16', '17-29', '30-55', '55+'] 
     let ageRangeSelected = 'Age Range'
-    let ageRange = () => { }
+    let ageRange = (e) => ageRangeSelected = e.target.value
 
     const provinces = [{ name: 'Alberta', abbreviation: 'AB' }, { name: 'British Columbia', abbreviation: 'BC' },
     { name: 'Manitoba', abbreviation: 'MB' }, { name: 'New Brunswick', abbreviation: 'NB' }, 
@@ -13,10 +13,26 @@ export default function Form() {
     { name: 'Prince Edward Island', abbreviation: 'PE' }, { name: 'Quebec', abbreviation: 'QC' },
     { name: 'Saskatchewan', abbreviation: 'SK' }, { name: 'Yukon Territory', abbreviation: 'YT' }]
     let province = ''
-    let provinceChange = () => { }
+    let provinceChange = (e) => province = e.target.value
     const flavoursArray = ['Classic', 'Boiling Hot Texas Style', 'Cranberry'] 
     let flavour = ''
-    let flavourChange = () => { }
+    let flavourChange = (e) => flavour = e.target.value
+
+    const submitClick = (e) => {
+        console.log(province)
+    }
+    let emailOffersPrefrence = false
+    let termsAgreed = false
+    const checkBox = (e) => {
+        if (e.target.value === 'emailOffers'){
+            emailOffersPrefrence = e.target.checked
+            console.log(emailOffersPrefrence)
+        } if (e.target.value === 'terms'){
+            termsAgreed = e.target.checked
+            console.log(termsAgreed)
+        }
+        
+    }
     return (
         <div className='form-box'>
             <h1>To Receive Promotional Coupons:</h1>
@@ -27,7 +43,7 @@ export default function Form() {
             </ul>    
                 <form>
                 <label aria-label='pin'>
-                    <input type="text" name='pin' placeholder='PIN' />
+                    <input type="text" name='pin' placeholder='PIN*' required='required' />
                 </label>
                 <label aria-label='email'>
                     <input type="text" name='email' placeholder='ENTER YOUR EMAIL ADDRESS' />
@@ -65,12 +81,13 @@ export default function Form() {
                         )
                     })}
                 </select>
-                <input type="checkbox" id="terms" name="terms" value="terms" className='checkbox' />
-                <label for="terms"> I have read, understood and agree to the<span>Terms of Use</span> and Privacy Policy.</label>
+                <p>*Mandatory Feild</p>
+                <input type="checkbox" id="terms" name="terms" value="terms" className='checkbox' required='required' onChange={checkBox} />
+                <label htmlFor="terms"> *I have read, understood and agree to the<span>Terms of Use</span> and Privacy Policy.</label>
                 <br></br>
-                <input type="checkbox" id="email" name="email" value="email" className='checkbox' />
-                <label for="email"> By checking this box, you can receive the latest email offers and communications from Canada Dry Mott’s Inc. You can unsubscribe at any time..</label>
-                <input type="submit" className='submit' value="GET YOUR COUPON" />
+                <input type="checkbox" name="email offers" value="emailOffers" className='checkbox' onChange={checkBox} />
+                <label htmlFor="email"> By checking this box, you can receive the latest email offers and communications from Canada Dry Mott’s Inc. You can unsubscribe at any time..</label>
+                <input type="submit" className='submit' value="GET YOUR COUPON" onClick={submitClick} />
                 </form>
                 <p className='tm'>™Trademark of Food Banks Canada used under licence. All other trademarks are the property of their respective owners.
 ©2019 Canada Dry Mott’s Inc. All Rights Reserved.</p>

@@ -16,14 +16,11 @@ export default function Nav() {
         }
     }
 
-    const downloadFile = () => {
-        window.location.href = "https://yoursite.com/src/assets/files/exampleDoc.pdf"
-      }
     return (
         <nav className={navState}>
             <img src={canadaDry} className='logo' alt='logo' />
             <div className='buttons'>
-            <a href='#' onClick={downloadFile} className='recipe'>recipe download</a>
+            <a href='./src/images/gingerale-recipe.pdf' download className='recipe'>recipe download</a>
             <select
                 value={language}
                 onChange={changeLanguage}
