@@ -40,10 +40,15 @@ export default function Form() {
             termsAgreed = e.target.checked
         }
     }
+    let birthday = ''
+    const birthdayChange = (e) => {
+        birthday = e.target.value
+    }
 
     const submitClick = (e) => {
         alert(`form submitted pin: ${pin}
         email: ${email}
+        birthday: ${birthday}
         age range: ${ageRangeSelected}
         province: ${province}
         flavour: ${flavour}
@@ -66,7 +71,7 @@ export default function Form() {
                     <input type="text" name='email' placeholder='ENTER YOUR EMAIL ADDRESS' />
                 </label>
                 <label aria-label="birthday">
-                    <input type="date" name="birthday" className='birthday' placeholder='Birthday'></input>
+                    <input type="date" name="birthday" className='birthday' onChange={birthdayChange} placeholder='Birthday'></input>
                 </label>
                 <select
                     className='age-groups'
