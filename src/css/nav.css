@@ -32,11 +32,46 @@ select {
     font-weight: 700;
 }
 
+.hamburger {
+    display: none;
+}
+
+@media only screen and (max-width: 414px) {
+    .logo {
+        width: 20%;
+    }
+}
 
 @media only screen and (max-width: 768px) {
     nav {
         width: 100%;
         background-color: white;
         height: 3em;
+        display: block;
+        position: relative;
+        margin-bottom: 2em;
     }
+
+    .language-select {
+        display: none;
+    }
+
+    .recipe {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 25%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        color:rgb(124, 123, 123);
+        font-size: 2em;
+    }
+
 }
