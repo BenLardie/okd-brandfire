@@ -1,8 +1,10 @@
 @import './variables.css';
+
 html {
   width: 100%;
   box-sizing: border-box;
 }
+
 .App {
   background-image: url(../images/background.png);
   width: 100%;

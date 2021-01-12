@@ -8,7 +8,7 @@ export default function Lockup() {
     return (
         <div className='lockup'>
         <img src={lockupEnglish} />
-        <img src={ardens} className='ardens' />
+        <img src={ardens} className='ardens' id='bg-image' />
         </div>
     )
 }
