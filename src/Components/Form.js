@@ -2,14 +2,21 @@ import React from 'react'
 import '../css/form.css'
 
 export default function Form() {
+    const ageGroups = ['10-16', '17-29', '30-55', '55+'] 
     let ageRangeSelected = 'Age Range'
-    let ageRange = () => {}
+    let ageRange = () => { }
 
+    const provinces = [{ name: 'Alberta', abbreviation: 'AB' }, { name: 'British Columbia', abbreviation: 'BC' },
+    { name: 'Manitoba', abbreviation: 'MB' }, { name: 'New Brunswick', abbreviation: 'NB' }, 
+    { name: 'Newfoundland and Labrador', abbreviation: 'NL' }, { name: 'Northwest Territories', abbreviation: 'NT' }, 
+    { name: 'Nova Scotia', abbreviation: 'NS' }, { name: 'Nunavut', abbreviation: 'NU' }, { name: 'Ontario', abbreviation: 'ON' },
+    { name: 'Prince Edward Island', abbreviation: 'PE' }, { name: 'Quebec', abbreviation: 'QC' },
+    { name: 'Saskatchewan', abbreviation: 'SK' }, { name: 'Yukon Territory', abbreviation: 'YT' }]
     let province = ''
-    let provinceChange = () => {}
-
+    let provinceChange = () => { }
+    const flavoursArray = ['Classic', 'Boiling Hot Texas Style', 'Cranberry'] 
     let flavour = ''
-    let flavourChange = () => {}
+    let flavourChange = () => { }
     return (
         <div className='form-box'>
             <h1>To Receive Promotional Coupons:</h1>
@@ -27,43 +34,34 @@ export default function Form() {
                     <input type="date" name="birthday" placeholder='birthday'></input>
                 </label>
                 <select
-                value={ageRangeSelected}
-                onChange={ageRange}
+                    value={ageRangeSelected}
+                    onChange={ageRange}
                 >
-                <option selected="selected">Age Range</option>
-                <option value="">16-20</option>
-                <option value="20/32">20-32</option>
-                <option value="33/66">33-66</option>
-                <option value="66+">66+</option>
-            </select>
-            <select
-                value={province}
-                onChange={provinceChange}
+                    <option defaultValue="selected">Age Range</option>
+                        {ageGroups.map(age => <option value={age} key={age}>{age}</option>)}
+                </select>
+                <select
+                    value={province}
+                    onChange={provinceChange}
                 >
-                <option selected="selected">Province/Territory</option>
-                <option value="AB">Alberta</option>
-                <option value="BC">British Columbia</option>
-                <option value="MB">Manitoba</option>
-                <option value="NB">New Brunswick</option>
-                <option value="NFL">Newfoundland and Labrador</option>
-                <option value="NS">Nova Scotia</option>
-                <option value="ON">Ontario</option>
-                <option value="PEI">Prince Edward Island</option>
-                <option value="QU">Quebec</option>
-                <option value="SASK">Saskatchewan</option>
-                <option value="NWT">Northwest Territories</option>
-                <option value="NVT">Nunavut</option>
-                <option value="YT">Yukon</option>
-            </select>
-            <select
-                value={flavour}
-                onChange={flavourChange}
+                    <option defaultValue="selected">Province/Territory</option>
+                    {provinces.map(prov => {
+                        return(
+                        <option value={prov.abbreviation} key={prov.abbreviation}>{prov.name}</option>
+                        )
+                    })}
+                </select>
+                <select
+                    value={flavour}
+                    onChange={flavourChange}
                 >
-                <option selected="selected">What is Your Preferred Flavour?</option>
-                <option value="cheese">Cheese</option>
-                <option value="bacon">Bacon</option>
-                <option value="hot">Hot</option>
-            </select>
+                    <option defaultValue="selected">What is Your Preferred Flavour?</option>
+                    {flavoursArray.map(flav => {
+                        return(
+                        <option value={flav} key={flav}>{flav}</option>
+                        )
+                    })}
+                </select>
                 <input type="submit" value="Submit" />
             </ul>
         </div>
