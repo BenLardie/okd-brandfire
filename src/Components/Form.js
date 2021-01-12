@@ -2,6 +2,17 @@ import React from 'react'
 import '../css/form.css'
 
 export default function Form() {
+
+    let pin = ''
+    let email = ''
+
+    const textChange = (e) => {
+        if (e.target.name === 'pin') {
+            pin = e.target.value
+        } if (e.target.name === 'email') {
+            email = e.target.value
+        }
+    }
     const ageGroups = ['10-16', '17-29', '30-55', '55+'] 
     let ageRangeSelected = 'Age Range'
     let ageRange = (e) => ageRangeSelected = e.target.value
@@ -18,20 +29,26 @@ export default function Form() {
     let flavour = ''
     let flavourChange = (e) => flavour = e.target.value
 
-    const submitClick = (e) => {
-        console.log(province)
-    }
+
     let emailOffersPrefrence = false
     let termsAgreed = false
+    
     const checkBox = (e) => {
         if (e.target.value === 'emailOffers'){
             emailOffersPrefrence = e.target.checked
-            console.log(emailOffersPrefrence)
         } if (e.target.value === 'terms'){
             termsAgreed = e.target.checked
-            console.log(termsAgreed)
         }
-        
+    }
+
+    const submitClick = (e) => {
+        alert(`form submitted pin: ${pin}
+        email: ${email}
+        age range: ${ageRangeSelected}
+        province: ${province}
+        flavour: ${flavour}
+        email offers: ${emailOffersPrefrence}
+        terms agreed: ${termsAgreed}`)
     }
     return (
         <div className='form-box'>
@@ -43,7 +60,7 @@ export default function Form() {
             </ul>    
                 <form>
                 <label aria-label='pin'>
-                    <input type="text" name='pin' placeholder='PIN*' required='required' />
+                    <input type="text" name='pin' onChange={textChange} placeholder='PIN*' required='required' />
                 </label>
                 <label aria-label='email'>
                     <input type="text" name='email' placeholder='ENTER YOUR EMAIL ADDRESS' />
@@ -56,7 +73,7 @@ export default function Form() {
                     value={ageRangeSelected}
                     onChange={ageRange}
                 >
-                    <option defaultValue="selected">Age Range</option>
+                    <option>Age Range</option>
                         {ageGroups.map(age => <option value={age} key={age}>{age}</option>)}
                 </select>
                 <select
@@ -81,7 +98,7 @@ export default function Form() {
                         )
                     })}
                 </select>
-                <p>*Mandatory Feild</p>
+                <p className='mandatory'>*Mandatory Feild</p>
                 <input type="checkbox" id="terms" name="terms" value="terms" className='checkbox' required='required' onChange={checkBox} />
                 <label htmlFor="terms"> *I have read, understood and agree to the<span>Terms of Use</span> and Privacy Policy.</label>
                 <br></br>

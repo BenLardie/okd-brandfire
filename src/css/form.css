@@ -65,6 +65,10 @@ label {
     margin: 0 auto;
 }
 
+.mandatory {
+    color: white;
+    margin-top: -0.5em;
+}
 .form-box select {
     background-color: white;
     color: black;
