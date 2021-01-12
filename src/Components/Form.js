@@ -24,6 +24,8 @@ export default function Form() {
                 <li><span className='list-number'>1.</span>Purchase participating specially marked Canada Dry and CPlus 12-packs and find your PIN inside the carton.</li>
                 <li><span className='list-number'>2.</span>Enter your PIN below.</li>
                 <li><span className='list-number'>3.</span>Click the GET YOUR COUPONS button and follow the online instructions to obtain the coupons. </li>
+            </ul>    
+                <form>
                 <label aria-label='pin'>
                     <input type="text" name='pin' placeholder='PIN' />
                 </label>
@@ -31,9 +33,10 @@ export default function Form() {
                     <input type="text" name='email' placeholder='ENTER YOUR EMAIL ADDRESS' />
                 </label>
                 <label aria-label="birthday">
-                    <input type="date" name="birthday" placeholder='birthday'></input>
+                    <input type="date" name="birthday" className='birthday' placeholder='birthday'></input>
                 </label>
                 <select
+                    className='age-groups'
                     value={ageRangeSelected}
                     onChange={ageRange}
                 >
@@ -63,7 +66,7 @@ export default function Form() {
                     })}
                 </select>
                 <input type="submit" value="Submit" />
-            </ul>
+                </form>
         </div>
     )
 }

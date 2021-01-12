@@ -9,3 +9,42 @@
     border: 0.5em solid var(--accent);
     z-index: 2;
 }
+
+form {
+    width: 80%;
+    margin: 0 auto;
+}
+
+input {
+    display: block;
+    width: 100%;
+    margin: 1em auto;
+    font-family: var(--main-font);
+    color: black;
+    padding: 0.5em;
+}
+
+::placeholder {
+    color: black;
+}
+
+.age-groups {
+    width: 48% !important;
+    display: inline-block !important;
+    margin: 0 auto;
+}
+
+.form-box select {
+    background-color: white;
+    color: black;
+    margin: 1em auto;
+    font-weight: 300;
+    padding: 0.5em;
+    width: 100%;
+}
+
+.birthday {
+    width: 48%;
+    display: inline-block;
+}
+
