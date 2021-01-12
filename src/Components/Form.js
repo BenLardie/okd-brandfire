@@ -20,10 +20,10 @@ export default function Form() {
     return (
         <div className='form-box'>
             <h1>To Receive Promotional Coupons:</h1>
-            <ul>
-                <li><span className='list-number'>1.</span>Purchase participating specially marked Canada Dry and CPlus 12-packs and find your PIN inside the carton.</li>
-                <li><span className='list-number'>2.</span>Enter your PIN below.</li>
-                <li><span className='list-number'>3.</span>Click the GET YOUR COUPONS button and follow the online instructions to obtain the coupons. </li>
+            <ul className='rules'>
+                <li><span className='list-number'>1.</span> Purchase participating specially marked Canada Dry and CPlus 12-packs and find your PIN inside the carton.</li>
+                <li><span className='list-number'>2.</span> Enter your PIN below.</li>
+                <li><span className='list-number'>3.</span> Click the GET YOUR COUPONS button and follow the online instructions to obtain the coupons. </li>
             </ul>    
                 <form>
                 <label aria-label='pin'>
@@ -33,7 +33,7 @@ export default function Form() {
                     <input type="text" name='email' placeholder='ENTER YOUR EMAIL ADDRESS' />
                 </label>
                 <label aria-label="birthday">
-                    <input type="date" name="birthday" className='birthday' placeholder='birthday'></input>
+                    <input type="date" name="birthday" className='birthday' placeholder='Birthday'></input>
                 </label>
                 <select
                     className='age-groups'
@@ -65,8 +65,15 @@ export default function Form() {
                         )
                     })}
                 </select>
-                <input type="submit" value="Submit" />
+                <input type="checkbox" id="terms" name="terms" value="terms" className='checkbox' />
+                <label for="terms"> I have read, understood and agree to the<span>Terms of Use</span> and Privacy Policy.</label>
+                <br></br>
+                <input type="checkbox" id="email" name="email" value="email" className='checkbox' />
+                <label for="email"> By checking this box, you can receive the latest email offers and communications from Canada Dry Mott’s Inc. You can unsubscribe at any time..</label>
+                <input type="submit" className='submit' value="GET YOUR COUPON" />
                 </form>
+                <p className='tm'>™Trademark of Food Banks Canada used under licence. All other trademarks are the property of their respective owners.
+©2019 Canada Dry Mott’s Inc. All Rights Reserved.</p>
         </div>
     )
 }

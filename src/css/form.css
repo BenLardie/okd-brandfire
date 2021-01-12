@@ -10,6 +10,28 @@
     z-index: 2;
 }
 
+.form-box h1 {
+    color: white;
+    font-family: var(--main-font);
+    font-weight: 700;
+    width: 70%;
+    text-align: center;
+    margin: 2em auto 1em;
+}
+
+.rules {
+    list-style: none;
+    font-family: var(--main-font);
+    color: white;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.list-number {
+    color: #ffcb08;
+    font-weight: 700;
+}
+
 form {
     width: 80%;
     margin: 0 auto;
@@ -24,8 +46,17 @@ input {
     padding: 0.5em;
 }
 
+label {
+    color: white;
+}
+
 ::placeholder {
     color: black;
+}
+
+.checkbox {
+    display: inline-block;
+    width: 10%;
 }
 
 .age-groups {
@@ -43,8 +74,24 @@ input {
     width: 100%;
 }
 
+
 .birthday {
     width: 48%;
     display: inline-block;
+}
+
+.submit {
+    color: white;
+    background-color:#ffcb08;
+    border: none;
+    font-family: var(--main-font);
+    font-weight: 700;
+}
+
+.tm {
+    color: white;
+    width: 80%;
+    font-size: 0.8em;
+    margin: 0 auto;
 }
 
